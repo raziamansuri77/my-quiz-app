@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./RM.jpg" type="image/x-icon" />
+    <title>Mansuri's Quiz-App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- -----------------------------------login start----------------------------------------- -->
+
+      <section>
+        <div class="container" id="login_main">
+          <div class="logo_details">
+            <div class="log-background">
+              <div class="logo"></div>
+            </div>
+            <div class="app_name">Mansuri's Quiz App</div>
+            <div class="user" id="user-name-display">Hello User!</div>
+          </div>
+          <div class="login_page">
+            <div class="user-entry">
+              Enter your name to continuo the course:
+            </div>
+
+            <form action="" onsubmit="login();return false;">
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+                name="username"
+              />
+
+              <input name="submit" type="Submit" value="Enter" id="login_btn" />
+            </form>
+            <div id="category">
+              <h1 class="category-heading">Select Category</h1>
+              <div class="category_options">
+                <button
+                  class="category_option"
+                  id="category1"
+                  onclick="chapterQuiz1()"
+                >
+                  HTML
+                </button>
+                <button
+                  class="category_option"
+                  id="category2"
+                  onclick="chapterQuiz2()"
+                >
+                  CSS
+                </button>
+                <button
+                  class="category_option"
+                  id="category3"
+                  onclick="chapterQuiz3()"
+                >
+                  JAVASCRIPT
+                </button>
+                <button
+                  class="category_option"
+                  id="category4"
+                  onclick="chapterQuiz4()"
+                >
+                  PYTHON
+                </button>
+              </div>
+              <!-- <div id="start-quiz">Start Quiz</div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -----------------------------------login end----------------------------------------- -->
+
+      <!-- -----------------------------------category start----------------------------------------- -->
+
+      <!-- -----------------------------------category end----------------------------------------- -->
+
+      <!-- -----------------------------------quiz start----------------------------------------- -->
+
+      <section>
+        <div id="quiz" class="hidden">
+          <div id="category-name"></div>
+          <div id="timer-score">
+            <div id="timer">Timer: <span id="timer-display">10</span></div>
+            <div id="score-increase">score:0</div>
+          </div>
+          <div id="score-record"><span id="current-question">1</span> /10</div>
+          <div id="question">Question goes here</div>
+
+          <div id="options" class="options-container">
+            <!-- Options will be dynamically added here -->
+          </div>
+          <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+      </section>
+
+      <!-- -----------------------------------quiz end----------------------------------------- -->
+      <!-- -----------------------------------result start----------------------------------------- -->
+
+      <section>
+        <div id="result" class="hidden">
+          <div id="result-heading">Quiz Result</div>
+          <div id="user-result-name"></div>
+          <!-- <div id="time-taken">Total time taken:</div> -->
+          <div id="question-attempt"></div>
+          <div id="correct-answer"></div>
+          <div id="wrong-answer">Wrong:</div>
+          <div id="percetage">Percentage:</div>
+          <div id="score"></div>
+          <div class="btns">
+            <button id="restart" onclick="restart()">Restart Quiz</button>
+            <button id="home" onclick="home()">Go To Home</button>
+          </div>
+        </div>
+      </section>
+      <!-- -----------------------------------result end----------------------------------------- -->
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
